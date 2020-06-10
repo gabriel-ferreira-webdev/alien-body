@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alien Body | Cart</title>
+      <link rel="shortcut icon" href="img/icone.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/cart.css">
+  </head>
+  <body>
+    <div id="bg-div"></div>
+    <div id="containerOverflow">
+
+
+      <header>
+        <input type="checkbox" id="myInput">
+        <div class="container">
+          <!-- MENU ICON -->
+
+
+          <div class="menuiconcontainer">
+            <label for="myInput">
+              <nav id="menuicon">
+                <div id="menuIconCell">
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                </div>
+                <div id="menuIconCell">
+                  <i>MENU</i>
+                </div>
+              </nav>
+            </label>
+          </div>
+          <!-- MENU -->
+          <div class="fade">
+
+          </div>
+          <div id="menu">
+
+            <nav id="menu-cell">
+
+                <ul><a href="index.html"><li class="menu-link" id="menu-link-1"><span>HOME</span></li></a><a href="shop.html"><li class="menu-link" id="menu-link-2"><span>SHOP</span></li></a>
+                <div class="searchbar" onclick="searchwidth()">
+                  <div class="searchbarCell">
+
+                  <input type="search" onkeydown="srch(this)"name="search" placeholder="Search" id="searchbar">
+                    <label for="search" id="searchbarlabel">
+                    </div>
+                  </div>
+                </ul>
+              </nav>
+            </div>
+            <div class="title">
+              <a href="index.html"><img src="img/logo.jpg" alt=""></a>
+            </div>
+
+            <label for="cart-checkbox" id="cart-label">
+              <div class="cart-info">
+                <div class="cart-info-cell">
+                  <nav>
+                    CART (<span id="cart-quantity">0</span>)
+                    <svg id="cart-svg" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8">
+                      <path d="M.34 0a.5.5 0 0 0 .16 1h1.5l.09.25.41 1.25.41 1.25c.04.13.21.25.34.25h3.5c.14 0 .3-.12.34-.25l.81-2.5c.04-.13-.02-.25-.16-.25h-4.44l-.38-.72a.5.5 0 0 0-.44-.28h-2a.5.5 0 0 0-.09 0 .5.5 0 0 0-.06 0zm3.16 5c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zm3 0c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5z"
+                      transform="translate(0 1)" />
+                    </svg>
+                  </nav>
+                </div>
+              </div>
+
+            </label>
+
+          </div>
+
+          <nav class="cart" id="cart">
+
+            <div class="cart-scroll">
+                <span id="no-cart-items">Your cart is empty.</span>
+            </div>
+
+            <div class="cart-subtotal">
+              <div class="cart-subtotal-info">
+                <span id="subtotal-span">SUBTOTAL</span>
+                <span id="subtotal-value-span">0.00</span>
+              </div>
+              <div class="cart-tos-table">
+                <span id="cart-tos">By clicking "Proceed to checkout" you agree to our terms of service.</span>
+              </div>
+
+              <div class="cart-btn">
+                <nav class="cart-btn-cell" id="cart-view-cart">
+                <a href="cart.html">VIEW CART</a>
+                </nav>
+              </div>
+
+              <div class="cart-btn">
+                <nav class="cart-btn-cell" id="cart-checkout">
+                  PROCEED TO CHECKOUT
+                </nav>
+              </div>
+
+            </div>
+
+
+
+          </header>
+
+          <main>
+            <span id="disable-gif"> <input type="checkbox" name="bg" id="bg-check">
+              Click here to turn the background on or off!</span>
+                        <div class="container" id="main-container">
+            <h2 id="your-cart">Your cart</h2>
+
+<div class="main-cart">
+<table id="table-header-desktop">
+  <tr>
+    <th class="price-table">Price</th>
+    <th class="quantity-table">Quantity</th>
+    <th class="total-table">Total</th>
+  </tr>
+</table>
+  <div class="main-cart-products">
+<div class="main-cart-product" id="cart-empty">
+  <span>Your cart is empty.</span>
+</div>
+
+
+  <!-- <div class="main-cart-product">
+
+    <img src="img\products\raw-vision-hoodie-yellow\ALBO-RAWVISION2020-GOLD-FRONT_1024x1024@2x.png" alt="">
+
+
+
+  <div class="main-cart-product-display">
+
+
+      <span class="main-cart-product-title">
+      RAW VISION HOODIE (YELLOW) - M
+    </span>
+    <br>
+    <button type="button" name="button" class="main-cart-product-remove">Remove</button>
+  </div>
+
+
+    <table class="main-cart-product-table">
+      <tr class="product-table-head">
+        <th class="price-table">Price</th>
+        <th class="quantity-table">Quantity</th>
+        <th class="total-table">Total</th>
+      </tr>
+  <tr class="product-table-values">
+    <td class="price-table">$80.00</td>
+    <td class="quantity-table">
+      <div class="main-quantity-label">
+                <div onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="quantity-label-btn quantity-label-btn-left">
+                  <span class="quantity-label-btn-text">−</span>
+                </div>
+    <input value="${item.quantity}"type="number" min="1"  class="main-cart-product-quantity-input">
+                <div onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="quantity-label-btn quantity-label-btn-right">
+                  <span class="quantity-label-btn-text">+</span>
+                </div>
+              </div></td>
+    <td class="total-table">$<span class="total-table-value">80.00</span></td>
+  </tr>
+    </table>
+
+  </div>
+
+
+<div class="main-cart-product">
+
+  <img src="img\products\raw-vision-hoodie-yellow\ALBO-RAWVISION2020-GOLD-FRONT_1024x1024@2x.png" alt="">
+
+
+
+<div class="main-cart-product-display">
+
+
+    <span class="main-cart-product-title">
+    RAW VISION HOODIE (YELLOW) - M
+  </span>
+  <br>
+  <button type="button" name="button" class="main-cart-product-remove">Remove</button>
+</div>
+
+
+  <table class="main-cart-product-table">
+    <tr class="product-table-head">
+      <th class="price-table">Price</th>
+      <th class="quantity-table">Quantity</th>
+      <th class="total-table">Total</th>
+    </tr>
+<tr class="product-table-values">
+  <td class="price-table">$80.00</td>
+  <td class="quantity-table">           <div class="main-quantity-label">
+              <div onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="quantity-label-btn quantity-label-btn-left">
+                <span class="quantity-label-btn-text">−</span>
+              </div>
+  <input value="${item.quantity}"type="number" min="1"  class="main-cart-product-quantity-input">
+              <div onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="quantity-label-btn quantity-label-btn-right">
+                <span class="quantity-label-btn-text">+</span>
+              </div>
+            </div></td>
+  <td class="total-table">$<span class="total-table-value">80.00</span></td>
+</tr>
+  </table>
+
+</div> -->
+
+  </div>
+
+<div class="main-cart-subtotal">
+
+
+
+<div id="cart-subtotal-info">
+
+
+  <div id="subtotal">
+<span id="subtotal-title">Subtotal</span> $<span id="subtotal-value">0.00</span>
+  </div>
+
+  <span id="main-cart-notice">Taxes and shipping calculated at checkout</span>
+<br>
+<div id="main-cart-buttons">
+  <button type="button" name="button" class="main-cart-button"><a href="index.html">Continue shopping</a></button>
+  <button type="button" name="button" class="main-cart-button" id="main-checkout">Check Out</button>
+  </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <ul>
+              <li></li>
+            </ul>
+            </div>
+          </main>
+          <footer>
+            <div class="container">
+              <div id="footer-flex">
+                                    <a href="https://shop.alienbody.com/"> <img src="img/alienbody.jpg" alt="" id="alien-body-link-img"> </a>
+                <div class="social">
+
+                  <h6>Copyright © 2020 ALIEN BODY</h6>
+                  <a href="https://twitter.com/ALIEN_BODY"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg><img src="" alt=""></a>
+                  <a href="https://www.instagram.com/alien_body_official/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                  <a href="https://www.youtube.com/channel/UCJEk9sklZKXr43Y_rp-QUMw"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg><img src="" alt=""> </a>
+
+                </div>
+                <div class="footer-info">
+                  <a href="https://gabrielgf.com"><img src="img/logo.png" alt=""></a>
+                  <br id="footer-info-br">
+                  <div id="footer-info-text">
+
+
+                  <span>
+                    Gabriel Ferreira<br>
+                    Web Development
+                  </span>
+                    <ul>
+                      <li><a href="https://gabrielgf.com">website</a></li> |
+                      <li><a href="mailto:contact@gabrielgf.com">contact@gabrielgf.com</a></li>
+                    </ul>
+                  </div>
+                  </div>
+                  <div class="back-top">
+                    <a href="#">Back to top</a>
+                  </div>
+                </div>
+              </div>
+
+            </footer>
+          </div>
+
+        </body>
+
+        <script type="text/javascript" src="js/menu.js"></script>
+        <script type="text/javascript" src="js/maincart.js"></script>
+        <script type="text/javascript" src="js/cookieapp.js"></script>
+        <script type="text/javascript" src="js/cart-app.js"></script>
+
+        <script type="text/javascript" src="js/searchbar.js"></script>
+        <script type="text/javascript" src="js/background.js"></script>
+
+      </html>

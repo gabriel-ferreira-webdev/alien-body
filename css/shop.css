@@ -1,0 +1,41 @@
+#shop-nav a:visited{
+  color:black;
+}
+#shop-nav a:link{
+  color:black;
+}
+#shop{
+  margin-left:5%;
+}
+#shop-nav{
+  position: relative;
+  z-index: 98;
+  left:0;
+  right:0;
+  margin:auto;
+  text-align: center;
+}
+#shop-nav a:visited:hover, #shop-nav a:link:hover{
+  opacity:.8;
+}
+#shop-nav ul li{
+  padding:0 3px;
+
+
+  display:inline-block;
+}
+#prev, #nxt{
+  margin:0 9px;
+}
+
+
+@media (min-width: 769px)
+{
+  .product{width:25%;}
+
+}
+
+#no-results{
+  font-size:large;
+  margin-top:24px;
+}
