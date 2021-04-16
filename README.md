@@ -15,8 +15,5 @@ Essa é uma recriação de uma das minhas lojas de roupa favoritas. Eu trabalhei
 
 AVISO: Requisições AJAX não são possíveis offline, você precisa usar um servidor para rodar isso.
 
-Use esse link para ver mídia do projeto:
-https://gabrielgf.com/br/alien-body-description.html
-
 Use esse link para ver o VERDADEIRO ALIEN BODY:
 https://shop.alienbody.com/
