@@ -3,8 +3,6 @@ This is a recreation of one of my favourite clothing stores. I worked on this as
 
 DISCLAIMER: AJAX requests are not possible offline, you need to use a server to run this.
 
-Use this link to see some media of the project:
-https://gabrielgf.com/alien-body-description.html
 
 Use this link to see the REAL ALIEN BODY:
 https://shop.alienbody.com/
